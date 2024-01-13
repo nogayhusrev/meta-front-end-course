@@ -28,9 +28,8 @@
     </head>
     
     <body>
-    
-    
-      <form action="">
+
+      <form action="" method="post">
         <div>
           <label for="username">Username</label><br>
           <input type="text" id="username" name="username" minlength="2" required>
@@ -41,10 +40,35 @@
         </div>
         <button type="submit">Log In</button>
       </form>
+
+      <br>
+      <hr>
+      <br>
+
+      <form action="" method="post">
+        <div>
+          <label for="booking_date">Booking Date</label><br>
+          <input type="date" id="booking_date" name="booking_date"  required>
+        </div>
+        <div>
+          <label for="booking_people">Number Of People</label><br>
+          <input type="range" id="booking_people" name="booking_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value=this.value">
+          <output>4</output>
+        </div>
+        <div>
+          <label for="locations">Location</label>
+          <input  id="booking_location" name="booking_location" list="locations">
+          <datalist id="locations">
+            <option value="Downtown">Downtown</option>
+            <option value="Uptown">Uptown</option>
+          </datalist>
+        </div>
+        <button type="submit">Book</button>
+      </form>
     
     </body>
     
-    </html>
+  
   </main>
 </body>
 
